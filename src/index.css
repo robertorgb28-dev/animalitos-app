@@ -1,0 +1,140 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-display: "Montserrat", system-ui, sans-serif;
+  --font-headline: "Montserrat", system-ui, sans-serif;
+  
+  --color-surface: #f4fafd;
+  --color-surface-dim: #d4dbdd;
+  --color-surface-bright: #f4fafd;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #eef5f7;
+  --color-surface-container: #e8eff1;
+  --color-surface-container-high: #e2e9ec;
+  --color-surface-container-highest: #dde4e6;
+  --color-on-surface: #161d1f;
+  --color-on-surface-variant: #414942;
+  --color-inverse-surface: #2b3234;
+  --color-inverse-on-surface: #ebf2f4;
+  --color-outline: #717971;
+  --color-outline-variant: #c1c9bf;
+  --color-surface-tint: #376847;
+  --color-primary: #316342;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #4a7c59;
+  --color-on-primary-container: #e1ffe5;
+  --color-inverse-primary: #9dd3aa;
+  --color-secondary: #5e5e5b;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #e1dfdb;
+  --color-on-secondary-container: #63635f;
+  --color-tertiary: #465c67;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #5e7580;
+  --color-on-tertiary-container: #f0f9ff;
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+  --color-primary-fixed: #b9efc5;
+  --color-primary-fixed-dim: #9dd3aa;
+  --color-on-primary-fixed: #00210e;
+  --color-on-primary-fixed-variant: #1e5031;
+  --color-secondary-fixed: #e4e2dd;
+  --color-secondary-fixed-dim: #c8c6c2;
+  --color-on-secondary-fixed: #1b1c19;
+  --color-on-secondary-fixed-variant: #474744;
+  --color-tertiary-fixed: #cee6f3;
+  --color-tertiary-fixed-dim: #b2cad7;
+  --color-on-tertiary-fixed: #061e28;
+  --color-on-tertiary-fixed-variant: #344a54;
+  --color-background: #f4fafd;
+  --color-on-background: #161d1f;
+  --color-surface-variant: #dde4e6;
+  
+  --shadow-ambient: 0 12px 20px -8px rgba(49, 99, 66, 0.08), 0 4px 12px -4px rgba(22, 29, 31, 0.05);
+  --shadow-soft: 0 8px 32px 0 rgba(49, 99, 66, 0.05);
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.material-symbols-outlined[data-weight="fill"],
+.filled-icon {
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-background);
+  color: var(--color-on-background);
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+}
+
+/* Base leaflet container overrides to ensure responsive boundary containment */
+.leaflet-container {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow: hidden !important;
+  touch-action: pan-y !important;
+  outline: none;
+}
+
+/* Custom Leaflet Popups for premium Animlist feel */
+.leaflet-container .leaflet-popup-content-wrapper {
+  background: #ffffff !important;
+  color: var(--color-on-surface) !important;
+  border-radius: 1.25rem !important; /* 20px */
+  padding: 0.25rem !important;
+  box-shadow: 0 12px 28px -5px rgba(49, 99, 66, 0.15), 0 8px 16px -6px rgba(22, 29, 31, 0.08) !important;
+  border: 1.5px solid rgba(74, 124, 89, 0.08) !important;
+}
+
+.leaflet-container .leaflet-popup-tip {
+  background: #ffffff !important;
+  box-shadow: 0 8px 16px -6px rgba(22, 29, 31, 0.08) !important;
+}
+
+.leaflet-container .leaflet-popup-content {
+  margin: 0.75rem 1rem !important;
+  font-family: var(--font-sans) !important;
+  line-height: 1.5 !important;
+  font-size: 0.8125rem !important;
+}
+
+.leaflet-container .leaflet-popup-close-button {
+  color: var(--color-on-surface-variant) !important;
+  padding: 0.5rem !important;
+  font-size: 1.125rem !important;
+  transition: color 0.15s ease !important;
+}
+
+.leaflet-container .leaflet-popup-close-button:hover {
+  color: var(--color-primary) !important;
+  background-color: transparent !important;
+}
+
+

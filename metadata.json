@@ -1,0 +1,6 @@
+{
+  "name": "Animlist",
+  "description": "Registra, guarda y organiza tus avistamientos de animales de forma rápida y sencilla.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

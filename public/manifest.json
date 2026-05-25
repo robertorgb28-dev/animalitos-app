@@ -1,0 +1,24 @@
+{
+  "name": "Animlist - Cuaderno de Avistamientos",
+  "short_name": "Animlist",
+  "description": "Registra, guarda y organiza tus avistamientos de animales de forma rápida y sencilla.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f3f7f4",
+  "theme_color": "#4a7c59",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "https://img.icons8.com/color/512/natural-food.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://img.icons8.com/color/192/natural-food.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
